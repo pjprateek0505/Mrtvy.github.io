@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./main.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="icon" type="image/x-icon" href="./images/metvy-logo.jpg">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Home</title>
+
+    <style>
+        .user-image{
+            padding:2.5rem;
+            filter:grayscale(1);
+            transition: all 1s;
+            animation: scaleImage 5s linear infinite;
+        }
+        @keyframes scaleImage {
+            0%{
+                filter:greyscale(1);
+                transition: scale(1);
+            }
+            50%{
+                transform: scale(1.1);
+                filter:grayscale(1);
+                
+            }
+            100%{
+                transform: scale(1);
+                filter:grayscale(0);
+                box-shadow: 0.1px 0.1px 0.2px black;
+            }
+        }
+        .cards::-webkit-scrollbar {
+            display: none;
+        }
+        .moveImage{
+            animation: 2s infinite  moveCompany;
+        }
+        
+        .movegImage{
+            animation: 3s ease-in-out  moveCompany;
+        }
+        
+        @keyframes moveCompany {
+            0%{
+                opacity: 0.1;
+                scale:0.9;
+            }
+            100%{
+                opacity: 1;
+                scale:1;
+            }
+        }
+
+        .anime{
+            animation: 5s infinite linear anime1;
+        }
+        @keyframes anime1 {
+            0%{
+                top:0;
+            }
+            100%{
+                top:-195%;
+            }
+        }
+
+    </style>
+
+
+</head>
+<body>
+    <div class="wrapper">
+        <div class="bg-gradient-to-r from-white via-blue-100 to-pink-100">
+            <nav class="flex mt-2 w-[1280px] mx-auto justify-between">
+                <div class="relative mx-auto mb-6 flex items-center justify-between">
+                
+                    <!-- logo -->
+                    <a href="/" class="cursor-pointer py-7 pr-7 flex">
+                        <img 
+                        src="./images/metvy-logo.jpg"
+                        width="50px"
+                        height="20px"/>
+                        <span class="text-black font-bold text-2xl my-auto ml-2">Metvy</span>
+                    </a>
+                    <ul class="flex space-x-4">
+                        <div class="  px-3 min-h-0 rounded-md">
+                            <li class="text-green-800 font-bold font-mullish py-7 hover:text-slate-600 cursor-pointer transition-all duration-200 relative group hidden lg:block text-xl">
+                                <a href="#">Home</a>
+                                <div class="absolute bottom-0 w-full h-1 bg-slate-500 hidden group-hover:block duration-300"></div>
+                            </li>
+                        </div>
+                        <li class="text-black font-mullish py-7 hover:text-slate-600 cursor-pointer transition-all duration-200 relative group hidden lg:block text-xl">
+                            <a href="#">Our Cohorts</a>
+                            <div class="absolute bottom-0 w-full h-1 bg-slate-500 hidden group-hover:block duration-300"></div>
+                        </li>
+                        <li class="text-black font-mullish py-7 hover:text-slate-600 cursor-pointer transition-all duration-200 relative group hidden lg:block text-xl">
+                            <a href="#">Community</a>
+                            <div class="absolute bottom-0 w-full h-1 bg-slate-500 hidden group-hover:block duration-300"></div>
+                        </li>
+                        <li class="text-black font-mullish py-7 hover:text-slate-600 cursor-pointer transition-all duration-200 relative group hidden lg:block text-xl">
+                            <a href="#">1:1 mentorship</a>
+                            <div class="absolute bottom-0 w-full h-1 bg-slate-500 hidden group-hover:block duration-300"></div>
+                        </li>
+                        <li class="text-black font-mullish py-7 hover:text-slate-600 cursor-pointer transition-all duration-200 relative group hidden lg:block text-xl ml-1">
+                            <a href="#">Masterclass </a>
+                            <div class="absolute bottom-0 w-full h-1 bg-slate-500 hidden group-hover:block duration-300"></div>
+                        </li>
+                        
+                    </ul>
+                    <div class="flex space-x-4 ml-7">
+                        <!-- <img src="./images/flag.png" 
+                        width="25px" 
+                        height="10px"/> -->
+                        <div class="flex bg-blue-500 border-slate-950 border-spacing-1 border-1 rounded-md py-2 px-6 relative justify-between 
+                            font-mullish  text-xl font-medium  cursor-pointer transition-all duration-200 hover:bg-orange-100 hover:scale-105">
+                            Get Started 
+                            <i class="fa fa-arrow-right my-auto ml-1 hover:ml-3"></i>
+                        </div>
+                    </div>
+                </div>
+                    
+            </nav>
+        </div>
+        <!--hero section-->
+        <div class="bg-gradient-to-r from-white via-blue-100 to-pink-100">
+            <div class="hero flex  w-[1280px] mx-auto justify-between pb-44">
+                <div class="flex-col ">
+                    <h1 class="text-7xl font-bold py-7 movegImage">Grow your <br>skills with our <br>Live Cohorts</h1>
+                    <p class="text-2xl text-slate-400 py-7">We are building an online learning ecosystem, helping <br> students with live up-skilling programs and mentorship <br>sessions.</p>
+                    <button
+                            class="relative bg-blue-500 flex items-center 
+                            justify-start text-white py-[14px] px-[18px] md:pr-[90px] rounded-md
+                            font-mullish font-bold hover:bg-blue-500 transition-all duration-200 self-stretch md:w-fit">
+                                Speak with our councoulers
+                                <div class="w-12 h-[60px] bg-green-300 absolute right-6 skew-x-[20deg] 
+                                flex justify-center items-center">
+                                    <!--arrow-->
+                                    <svg
+                                    viewBox="0 0 24 24"
+                                    focusable="false"
+                                    class="w-[20px] h-[20px] -skew-x-[20deg] "
+                                    >
+                                    <path
+                                        fill="currentColor"
+                                        d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"
+                                    ></path>
+                                    </svg>
+                                </div>
+                        </button>
+                </div>
+
+                <!--photoes-->
+                <div class=" loader flex ml-5 mt-20 mr-2 gap-1 user-image">
+                    <img src="./images/Aashi.webp" width="200px" height="200px" class="rounded-xl" >
+                    <img src="./images/Ankur.webp" width="200px" height="200px" class="rounded-xl">
+                    <img src="./images/Raunak.webp" width="200px" height="200px" class="rounded-xl">
+                </div>
+            </div>
+        </div>
+        <!--brand section-->
+        <div class="  bg-gradient-to-r from-blue-200 via-blue-100 to-white">
+            <div class="brands flex-col w-[1280px] mx-auto ">
+                <div class="brand-theory flex-col text-center">
+                    <h2 class="text-6xl font-bold py-7 movegImage">Our live program mentors come from more than 200+ brands</h2>
+                    <p class="text-3xl text-slate-400 py-10 movegImage">At Metvy, you get to learn from the role models and inspirations of your dreams. Embark upon 
+                        an enlightening journey led by folks that inspire your enthusiasm.</p>
+                </div>
+                <div class="flex-col py-16">
+                    <div class="brands1 flex justify-between mt-10">
+                        <img src="./images/BCG.svg" width="150px" height="150px" class="hover:scale-150 duration-200">
+                        <img src="./images/Google.webp" width="150px" height="150px" class="hover:scale-150 duration-200">
+                        <img src="./images/Adobe.svg" width="150px" height="150px" class="hover:scale-150 duration-200">
+                        <img src="./images/Brain&Company.svg" width="150px" height="150px" class="hover:scale-150 duration-200">
+                        <img src="./images/Swiggy.svg" width="150px" height="150px" class="hover:scale-150 duration-200">
+                    </div>
+                    <div class="brands2 flex justify-between mt-20">
+                        <img src="./images/Coin.svg" width="150px" height="150px" class="hover:scale-150 duration-200">
+                        <img src="./images/MS.svg" width="150px" height="150px" class="hover:scale-150 duration-200">
+                        <img src="./images/Meta.svg" width="150px" height="150px" class="hover:scale-150 duration-200">
+                        <img src="./images/Mnc.svg" width="150px" height="150px" class="hover:scale-150 duration-200">
+                        <img src="./images/amaxon.svg" width="150px" height="150px" class="hover:scale-150 duration-200">
+                    </div>
+                </div>
+        </div>
+        </div>
+        <!--This is what set us apart-->
+        <div class="flex-col w-[1280px] mx-auto mt-44 mb-10 ">
+            <h1 class="text-6xl font-bold py-7 font-mullish movegImage">This is what <br>set us apart</h1>
+            <div class=" flex justify-between">
+                <div class="flex-col mr-10">
+                    <!--point 1-->
+                    <div class="flex my-8">
+                        <div>
+                            <img src="./images/teach.svg" class="mr-2 hover:scale-125 movegImage">
+                        </div>
+                        <div>
+                            <h2 class="font-mullish text-2xl font-bold">Community learning</h2>
+                            <p class="text-lg">India’s first peer to peer mentorship and learning platform</p>
+                        </div>
+                    </div>
+                    <!--point 2-->
+                    <div class="flex my-8">
+                        <div>
+                            <img src="./images/couple.svg" class="mr-2 hover:scale-125 movegImage">
+                        </div>
+                        <div>
+                            <h2 class="font-mullish text-2xl font-bold">Community learning</h2>
+                            <p class="text-lg">India’s first peer to peer mentorship and learning platform</p>
+                        </div>
+                    </div>
+                    <!--point 3-->
+                    <div class="flex my-8">
+                        <div>
+                            <img src="./images/dollar.svg" class="mr-2 hover:scale-125 movegImage">
+                        </div>
+                        <div>
+                            <h2 class="font-mullish text-2xl font-bold">Community learning</h2>
+                            <p class="text-lg">India’s first peer to peer mentorship and learning platform</p>
+                        </div>
+                    </div>
+                    <!--point 4-->
+                    <div class="flex my-8">
+                        <div>
+                            <img src="./images/clock.svg" class="mr-2 hover:scale-125 movegImage">
+                        </div>
+                        <div>
+                            <h2 class="font-mullish text-2xl font-bold">Community learning</h2>
+                            <p class="text-lg">India’s first peer to peer mentorship and learning platform</p>
+                        </div>
+                    </div>
+                </div>
+                    <!--moving image-->
+                    <div class=" h-[400px] w-[600px] relative overflow-y-hidden my-auto mr-10">
+                        <img src="./images/multiple.png" class="anime absolute h-auto rounded-lg" height="400px" width="500px">
+                    </div>
+            
+            </div>
+            
+        </div>
+        <!--Cohorts-->
+        <div class=" py-3 bg-gradient-to-r from-blue-200 via-blue-100 to-white">
+            <div class="cohorts flex-col w-[1280px] mx-auto mt-32 mb-24">
+                <div class="theory flex-col mx-auto">
+                    <div class="flex">
+                        <h2 class="text-6xl font-bold py-7 font-mullish">Our Popular</h2>
+                        <span class="text-6xl font-bold py-7 font-mullish ml-4 moveImage">Cohorts</span>
+                    </div>
+                    <p class="text-3xl text-slate-400 py-10 font-mullish">Explore our live and exclusive cohorts based <br> learning programs led
+                        by top experts hailing <br> from brands like Meta, Google, Microsoft,<br> YouTube and many more
+                    </p>
+                </div>
+                <div class="imgs  flex justify-between mt-20 ">
+                    <img src="./images/MetvyFinance.webp" class="hover:scale-105 duration-200">
+                    <img src="./images/MetvyFinance2.webp" class="hover:scale-105 duration-200">
+                </div>
+                <div class="w-full flex flex-row mx-auto space-x-2 justify-center mt-20">
+                    <!--dot 1-->
+                    <div class="h-[10px] w-[10px] bg-gray-300 rounded-full"></div>
+            
+                    <div class="h-[10px] w-[10px] bg-slate-500 rounded-full"></div>
+            
+                    <div class="h-[10px] w-[10px] bg-gray-300 rounded-full"></div>
+            
+                    <div class="h-[10px] w-[10px] bg-gray-300 rounded-full"></div>
+            
+                    <div class="h-[10px] w-[10px] bg-gray-300 rounded-full"></div>
+            
+                    <div class="h-[10px] w-[10px] bg-gray-300 rounded-full"></div>
+            
+                </div>
+            </div>
+        </div>
+        <!--Educators-->
+        <div class=" py-10 bg-gradient-to-r from-white via-blue-100 to-pink-100">
+            <div class="flex-col w-[1280px] mx-auto mt-44 mb-20 ">
+                <h2 class="text-6xl font-bold py-7 font-mullish text-center moveImage">Our Top Educators</h2>
+                <p class="text-2xl text-slate-400 py-10 font-mullish text-center">A good educator affects eternity, he can never tell where his influence stops.</p>
+                <!--BUTTON-->
+                <button class="flex bg-blue-500 border-slate-950 border-spacing-1 border-1 rounded-md py-4 px-6 mx-auto
+                            font-mullish  text-xl font-medium  cursor-pointer hover:bg-orange-100 hover:scale-105">
+                            Get Started 
+                            <i class="fa fa-arrow-right my-auto ml-1 hover:ml-3"></i>
+                </button>
+                <img src="./images/GroupPhoto.webp" class="mx-auto mt-20 movegImage" loading="lazy">
+                <div class="flex">
+                    
+                    <div class="flex-col mx-auto border-white  box-border p-6 border-8 rounded-xl">
+                        <p class="text-xl text-slate-900 py-10 font-mullish text-center">A great platform for young aspiring student and even for industry professionals to up skill</p>
+                        <h2 class="text-2xl font-bold py-2 font-mullish text-center">Raunak Ghosal</h2>
+                        <p class="text-xl text-slate-900 py-2 font-mullish text-center">Senior Designer at Swiggy</p>
+                    </div>
+                    
+                </div>
+                <div class="w-full flex flex-row mx-auto space-x-2 justify-center mt-20">
+                    <!--dot 1-->
+                    <div class="h-[10px] w-[10px] bg-gray-300 rounded-full"></div>
+            
+                    <div class="h-[10px] w-[10px] bg-blue-500 rounded-full"></div>
+            
+                    <div class="h-[10px] w-[10px] bg-gray-300 rounded-full"></div>
+            
+                    <div class="h-[10px] w-[10px] bg-gray-300 rounded-full"></div>
+
+            
+                </div>
+            </div>
+        </div>
+        <!--REVIEW SECTION-->
+        <div class="flex-col w-[1280px] mx-auto mt-44 mb-20 ">
+            <div>
+                <img src="./images/semicolon.svg" alt="">
+            </div>
+            <div>
+                <h2 class="text-5xl font-bold py-7 font-mullish">Don’t trust us, listen to <br>what they say !</h2>
+                <p class="text-2xl text-slate-400 py-3 font-mullish">More than 5000 students have been helped through <br>
+                these live sessions</p>
+            </div>
+            <!-- CARDS-->
+            <div class=" cards overflow-y-auto h-64 rounded-lg scroll-m-0">
+                <!--card 1-->
+                <div class="bg-gradient-to-r from-blue-500 ">
+                    <img src="./images/semicolon.svg" alt="">
+                    <div >
+                        <h2 class="text-xl font-bold  font-mullish">Archie Ajmera</h2>
+                        <p class="font-mullish text-black">Metvy Finance Program</p>
+                    </div>
+                    <br>
+                    <br>
+                    <p>“It was a great learning experience. Got to learn a lot of new things about finance, stock market etc. Enjoyed the program a lot..."</p>
+                </div>
+                <!--card 2-->
+                <div class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
+                    <img src="./images/semicolon.svg" alt="">
+                    <div >
+                        <h2 class="text-xl font-bold  font-mullish">Archie Ajmera</h2>
+                        <p class="font-mullish text-black">Metvy Finance Program</p>
+                    </div>
+                    <br>
+                    <br>
+                    <p>“It was a great learning experience. Got to learn a lot of new things about finance, stock market etc. Enjoyed the program a lot..."</p>
+                </div>
+                <!--card 3-->
+                <div class="bg-gradient-to-r from-blue-500">
+                    <img src="./images/semicolon.svg" alt="">
+                    <div >
+                        <h2 class="text-xl font-bold  font-mullish">Archie Ajmera</h2>
+                        <p class="font-mullish text-black">Metvy Finance Program</p>
+                    </div>
+                    <br>
+                    <br>
+                    <p>“It was a great learning experience. Got to learn a lot of new things about finance, stock market etc. Enjoyed the program a lot..."</p>
+                </div>
+                <!--card 4-->
+                <div class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
+                    <img src="./images/semicolon.svg" alt="">
+                    <div >
+                        <h2 class="text-xl font-bold  font-mullish">Archie Ajmera</h2>
+                        <p class="font-mullish text-black">Metvy Finance Program</p>
+                    </div>
+                    <br>
+                    <br>
+                    <p>“It was a great learning experience. Got to learn a lot of new things about finance, stock market etc. Enjoyed the program a lot..."</p>
+                </div>
+                <!--card 5-->
+                <div class="bg-gradient-to-r from-blue-500">
+                    <img src="./images/semicolon.svg" alt="">
+                    <div >
+                        <h2 class="text-xl font-bold  font-mullish">Archie Ajmera</h2>
+                        <p class="font-mullish text-black">Metvy Finance Program</p>
+                    </div>
+                    <br>
+                    <br>
+                    <p>“It was a great learning experience. Got to learn a lot of new things about finance, stock market etc. Enjoyed the program a lot..."</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="flex-col w-[1280px] mx-auto mt-44 mb-20 ">
+            <h2 class="text-7xl font-bold py-7 font-mullish text-center">We have been 
+                <span class=" moveImage text-blue-500 ">Featured</span> 
+                on
+            </h2>
+            <div class="flex justify-between py-16">
+                <img src="./images/image1.svg" >
+                <img src="./images/image2.svg" >
+                <img src="./images/image3.svg" >
+                <img src="./images/image4.svg" >
+                <img src="./images/image5.svg" >
+                <img src="./images/image6.svg" >
+            </div>
+        </div>
+
+        <div class="mt-44 mb- bg-slate-800 ">
+            <div class="w-[1024] flex justify-between mx-auto">
+                <div class=" ml-20">
+                    <div class="py-10">
+                        <a href="/" class="cursor-pointer py-7 pr-7 flex mb-2">
+                            <img 
+                            src="./images/metvy-logo.jpg"
+                            width="50px"
+                            height="20px"/>
+                            <span class="text-white font-bold text-2xl my-auto ml-2">Metvy</span>
+                        </a>
+                        <img src="./images/logolit.svg" class="mb-4">
+                        <p class="text-white font-mullish font-bold text-lg">Get In Touch</p>
+                        <p class="text-white font-mullish font-bold text-lg">Phone: +919821964864 <br>
+                            Email: ayush@metvy.com</p>
+                    </div>
+                </div >
+                <div class="justify-between py-10">
+                    <p class="text-white font-mullish mb-5 text-lg hover:text-slate-500">Home
+                    </p>
+                    <p class="text-white font-mullish mb-5 text-lg hover:text-slate-500">About Us</p>
+                    <p class="text-white font-mullish mb-5 text-lg hover:text-slate-500">Blog</p>
+                    <p class="text-white font-mullish mb-5 text-lg hover:text-slate-500">Team</p>
+                    <p class="text-white font-mullish mb-5 text-lg hover:text-slate-500">Career</p>
+                    <p class="text-white font-mullish mb-5 text-lg hover:text-slate-500">Primary Policy</p>
+                </div>
+                <div class="mr-20 py-10 mt-12">
+                    <p class="text-xl font-mullish font-bold text-white mb-6">Get the Latest Update</p>
+                    <div class="flex">
+                        <input type="text" name="" placeholder="  Email Id" class="rounded-lg rounded-r-none w-80 border-collapse border-2 text-lg h-25 bg-transparent hover:border-red-400" >
+                        <div class="flex space-x-4">
+                            <div class="flex bg-blue-100 border-slate-950 border-spacing-1 border-1 rounded-md py-2 px-6 relative justify-between 
+                                font-mullish  text-xl font-medium  cursor-pointer transition-all duration-200 hover:bg-orange-100 hover:scale-105 rounded-l-none">
+                                Subscribe
+                                <!-- <i class="fa fa-arrow-right my-auto ml-1 hover:ml-3"></i> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--FOOTER-->
+        <div class=" bg-slate-800 flex">
+            <p class="text-center text-white mx-auto mt-5 mb-5">Copyright © METVY NET PRIVATE LIMITED. All rights reserved</p>
+        </div>
+    </div>
+</body>
+</html>
